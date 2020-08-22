@@ -22,7 +22,6 @@
 
 
 #include <stdio.h>
-#include "stats.h"
 
 /* Size of the Data Set */
 #define SIZE (40)
