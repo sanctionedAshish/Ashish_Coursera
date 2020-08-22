@@ -21,85 +21,97 @@
 #ifndef __STATS_H__
 #define __STATS_H__
 
-/* Add Your Declarations and Function Comments here */ 
-
-**
- * @brief A function that prints the statistics of an array including minimum, 
- * maximum, mean, and median.
+/**
+ * @brief Print data array statistics.
  *
- * @param array The array containing the dataset of unsigned chars
- * @param length The length of the array
+ * A function that prints the statistics of an array including minimum, maximum, 
+ * mean, and median.
  *
- * @return NULL
+ * @param median 	Median value
+ * @param mean 	 	Mean value	
+ * @param maximum 	Maximum value	
+ * @param minimum 	Minimum value	
+ *
+ * @return void
  */
-void print_statistics(unsigned char array[], unsigned int length);
+void print_statistics(int median, int mean, int maximum, int minimum);
 
-
-/** 
- * @brief Given an array of data and a length, prints the array to the screen
+/**
+ * @brief Prints array to screen.
  *
- * @param array An array of unsigned chars
- * @param length The length of the array
+ * Given an array of data and a length, prints the array to the screen.
  *
- * @return NULL
+ * @param data 	Char data array
+ * @param len 	Array length	
+ *
+ * @return void
  */
-void print_array(unsigned char array[], unsigned int length);
+void print_array(unsigned char *data, int len);
 
-
-/** 
- * @brief Given an array of data and a length, returns the median value
+/**
+ * @brief Calculate array data median value.
  *
- * @param array An array of unsigned chars
- * @param length The length of the array
+ * Given an array of data and a length, returns the median value.
+ * Assume the array is ordered.
  *
- * @return median The median of the array
+ * @param data 	Char data array
+ * @param len 	Array length	
+ *
+ * @return The data median value
  */
-unsigned char find_median(unsigned char array[], unsigned int length);
+int find_median(unsigned char *data, int len);
 
-
-/** 
- * @brief Given an array of data and a length, returns the min value
+/**
+ * @brief Calculate array data mean value.
  *
- * @param array An array of unsigned chars
- * @param length The length of the array
+ * Given an array of data and a length, returns the mean.
+ * Assume the array is ordered.
  *
- * @return median The min of the array
+ * @param data 	Char data array
+ * @param len 	Array length	
+ *
+ * @return The data mean value
  */
-unsigned char find_min(unsigned char array[], unsigned int length);
+int find_mean(unsigned char *data, int len);
 
-
-/** 
- * @brief Given an array of data and a length, returns the max value
+/**
+ * @brief Calculate array data maximum value.
  *
- * @param array An array of unsigned chars
- * @param length The length of the array
+ * Given an array of data and a length, returns the maximum.
+ * Assume the array is ordered.
  *
- * @return median The max of the array
+ * @param data 	Char data array
+ * @param len 	Array length	
+ *
+ * @return The data maximum value
  */
-unsigned char find_max(unsigned char array[], unsigned int length);
+int find_maximum(unsigned char *data, int len); 
 
-
-/** 
- * @brief Given an array of data and a length, returns the mean value
+/**
+ * @brief Calculate array data minimum value.
  *
- * @param array An array of unsigned chars
- * @param length The length of the array
+ * Given an array of data and a length, returns the minimum.
+ * Assume the array is ordered.
  *
- * @return median The mean of the array
+ * @param data 	Char data array
+ * @param len 	Array length	
+ *
+ * @return The data minimum value
  */
-unsigned char find_mean(unsigned char array[], unsigned int length);
+int find_minimum(unsigned char *data, int len);
 
-
-/** 
- * @brief Sorts the array using selection sort
+/**
+ * @brief Calculate array data mean value.
  *
- * Selection sort is used despite its O(n^2) runtime because it has a 
- * spatial complexity of O(1) and that is more important in this 
- * embedded system context (limited memory).
+ * Given an array of data and a length, sorts the array from 
+ * largest to smallest. (The zeroth Element should be the largest 
+ * value, and the last element (n-1) should be the smallest value).
  *
- * @param array An array of unsigned chars
- * @param length The length of the array
+ * @param data 	Char data array
+ * @param len 	Array length	
+ *
+ * @return void
  */
-void sort_array(unsigned char array[], unsigned int length);
+void sort_array(unsigned char *data, int len);
 
 #endif /* __STATS_H__ */
